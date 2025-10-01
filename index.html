@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>My first three.js app</title>
+    <style>
+      /* body { margin: 0; } */
+      *
+      {
+          margin: 0;
+          padding: 0;
+      }
+      .webgl
+      {
+          position: fixed;
+          top: 0;
+          left: 0;
+          outline: none;
+      }
+      html,
+      body
+      {
+          overflow: hidden;
+      }
+
+      .info
+      {
+          position: absolute;
+          top: 5%;
+          left: 5%;
+      }
+
+      .info .text
+      {
+          position: absolute;
+          top: 0px;
+          /* left: -220px; */
+          width: 300px;
+          height: 50px;
+          padding: 20px;
+          border-radius: 4px;
+          background: #00000077;
+          border: 1px solid #ffffff77;
+          color: #ffffff;
+          line-height: 1.3em;
+          font-family: Helvetica, Arial, sans-serif;
+          font-weight: 100;
+          font-size: 26px;
+          visibility: hidden;
+      }
+      .visible {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 250ms ease-in, visibility 0ms ease-in 0ms;
+      }
+      .hidden {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 250ms ease-in, visibility 0ms ease-in 250ms;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-sm-fB6Db.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DVneG3Rq.css">
+  </head>
+  <body>    
+    <canvas id="c"></canvas>        
+
+    <div class="info">      
+      <div class="text">
+        <div id="math"></div>
+      </div>
+    </div>
+    
+    <script>
+      renderMathInElement(
+          document.body,
+          {
+              delimiters: [
+                  {left: "<math>", right: "</math>", display: false},
+                  {left: "$$", right: "$$", display: true},
+                  {left: "$", right: "$", display: false},
+                  {left: "\\[", right: "\\]", display: true},
+                  {left: "\\(", right: "\\)", display: false},
+              ]
+          }
+      );
+    </script>
+  </body>
+</html>
+    
